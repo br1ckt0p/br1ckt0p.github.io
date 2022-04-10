@@ -1,0 +1,85 @@
+@font-face {
+ font-family: "Angry Birds";
+ src: url("../font/AngrybirdsRegular.ttf") format("truetype");
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	background-color: #eee;
+}
+.main{
+	background-color: #fff;
+	display: flex;
+	width: 95%;
+	max-width: 1000px;
+	margin: auto;
+	box-shadow: 0 0 25px 3px rgba(0, 255, 0, 0.3);
+	flex-wrap: wrap;
+}
+.item{
+	max-height: 265px;
+	max-width: 490px;
+	height: calc(95vw / 2 / 16 * 9);
+	width: calc(50vw - 10px);
+	background-color: dodgerblue;
+	/*margin: 5px;*/
+	background-position: center;
+	background-size: cover;
+}
+.heading{
+	font-size: 56px;
+	text-align: center;
+	width: 100%;
+	padding: 30px 0;
+	font-family: "Angry Birds";
+	color: dodgerblue;
+}
+.img_link{
+	margin: 5px;
+	display: block;
+	opacity: 0.6;
+	transition: opacity 1.4s ease,transform 0.5s ease-in, box-shadow 0.4s ease-out;
+}
+
+
+@media all and (max-width:  768px){
+	.item{
+		max-width: initial;
+		max-height: initial;
+		width: 90vw;
+		height: calc(90vw / 16 * 9);
+		margin: auto;
+	}
+	.img_link{
+		margin: 5px 0;
+		opacity: 1;
+	}
+}
+@media all and (min-width: 1000px){
+	.img_link:hover{
+		opacity: 1;
+		transform: scale(1.2) rotate(5deg);
+		z-index: 10;
+		box-shadow: 0 0 200px 30px rgba(30,144,255,0.4);
+	}
+}
+.link-wrapper{
+	width: 100%;
+	padding: 20px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.author{
+	color: #111;
+	text-decoration: none;
+	border-bottom: 2px solid transparent;
+	transition: 0.8s;
+}
+.author:hover{
+	border-bottom-color: #111;
+}
